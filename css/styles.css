@@ -1,0 +1,383 @@
+:root {
+    --black: #171321;
+    --dkblue: #0d314b;
+    --plum: #4b0d49;
+    --hotmag: #ff17e4;
+    --magenta: #e310cb;
+    --aqua: #86fbfb;
+    --white: #f7f8fa;
+    --font-size: 1.3rem;
+    --fraunces: "Fraunces";
+    --FiraCode: "Fira Code";
+}
+/* border box model: https://css-tricks.com/box-sizing/ */
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+/* generic styles for the page */
+body {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    font-family: var(--fraunces);
+    background-color: var(--black);
+    color: var(--white);
+    font-size: var(--font-size);
+}
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+a {
+    color: var(--magenta);
+}
+
+a:hover {
+    color: var(--hotmag);
+    text-decoration: none;
+}
+/* intro styles */
+.intro {
+    padding: 4rem 1rem 10rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.intro p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.intro .name {
+    font-family: var(--FiraCode);
+    font-size: 1rem;
+}
+
+.name span {
+    font-family: var(--fraunces);
+    font-size: 4rem;
+    color: var(--aqua);
+    display: block;
+    font-weight: 300;
+}
+
+#intro h2 {
+    font-size: 4rem;
+}
+#contact {
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+.section-plum {
+    background-color: var(--plum);
+}
+.gradient {
+    background: rgb(68, 52, 173);
+    background: linear-gradient(
+        90deg,
+        rgba(68, 52, 173, 1) 0%,
+        rgba(134, 251, 251, 1) 100%
+    );
+    height: 2px;
+}
+#contact p:last-child {
+    margin-top: 3rem;
+}
+
+nav {
+    font-family: var(--fraunces);
+    font-size: 80%;
+    padding: 1rem;
+}
+
+nav h1 a {
+    font-family: var(--FiraCode);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+nav [class*="fa-"] {
+    font-size: 150%;
+    color: var(--aqua);
+}
+nav h1 [class*="fa-"] {
+    font-size: 100%;
+}
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    display: block;
+    transition-duration: 0.3s;
+}
+
+nav a:hover {
+    color: var(--magenta);
+}
+
+.button {
+    background-color: var(--magenta);
+    padding: 0.5rem;
+    color: var(--white);
+    border-radius: 5px;
+    font-family: var(--fraunces);
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: var(--hotmag);
+    color: var(--white);
+}
+
+/* projects section */
+.section-blue {
+    background-color: rgb(53, 53, 136);
+}
+
+#projects {
+    padding: 4rem 1rem;
+    max-width: 1400px;
+    margin: auto;
+}
+#projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: calc(2.5rem * 1.5);
+}
+#projects h3 {
+    color: var(--aqua);
+}
+
+#projects h4 {
+    font-size: 1rem;
+    font-family: var(--mono);
+    margin: 0;
+}
+.blackbox {
+    padding: 1rem;
+    border-radius: 10px;
+    color: white;
+    background-color: var(--black);
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+#projects ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    font-size: 1rem;
+}
+#projects img {
+    margin: 2rem 0 4rem 0;
+    padding: 1rem;
+    border-left: 1px solid var(--aqua);
+    border-top: 1px solid var(--aqua);
+    border-radius: 25px;
+    width: 100%;
+}
+
+/* ABOUT SECTION */
+.about-wrap {
+    margin: 0 1rem;
+}
+.about-me {
+    margin: 1rem auto;
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 1000px;
+}
+.about-me h2 {
+    text-align: center;
+}
+.text-me {
+    display: flow-root;
+    margin: 2rem 0;
+}
+
+.about-me img {
+    max-height: 200px;
+    shape-outside: polygon(
+        96.34% 67.31%,
+        75% 92.71%,
+        77.75% 10.62%,
+        97.86% 42.27%
+    );
+    float: left;
+    border-radius: 50%;
+    margin: 0 0.5rem;
+    cursor: grab;
+    cursor: -webkit-grab;
+}
+.about-me p {
+    line-height: 1.7;
+    margin: 0 0.5rem;
+}
+/* IMG SWIPER SECTION */
+.gallery-img {
+    display: none;
+    max-height: 600px;
+    max-width: 60vw;
+    object-fit: cover;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 5px;
+    border: 5px solid rgb(27, 26, 26);
+    margin: auto;
+}
+
+
+.active {
+    display: block;
+}
+
+.image-gallery {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    background-color: #0074d9;
+    color: white;
+    font-size: calc(1rem + 1vw);
+    margin: 1rem;
+    padding: 5px 20px;
+    border-color: transparent;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: white;
+    color: blue;
+}
+.btn:disabled {
+    background-color: #777;
+    cursor: not-allowed;
+}
+
+.prev {
+    margin-right: 15px;
+}
+@media (min-width: 800px) {
+    article {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+    }
+    #projects {
+        margin: 0 auto;
+    }
+    #projects img {
+        grid-column: 1/6;
+        grid-row: 1/2;
+    }
+    .text {
+        grid-column: 5/11;
+        grid-row: 1/2;
+        order: 2;
+        align-items: center;
+        align-content: center;
+        text-align: right;
+    }
+    #projects ul {
+        justify-content: flex-end;
+    }
+    #projects .reverse .text {
+        grid-column: 1/7;
+        order: 2;
+        text-align: left;
+    }
+    #projects .reverse img {
+        grid-column: 6/11;
+        grid-row: 1/2;
+    }
+    #projects .reverse ul {
+        justify-content: flex-start;
+    }
+}
+@media (min-width: 850px) {
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    nav li:first-child {
+        flex-basis: auto;
+        text-align: left;
+        margin-right: auto;
+    }
+    body {
+        position: relative;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+footer h3 {
+    margin: 1rem 0;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 2rem 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    font-size: 2rem;
+}
+
+footer [class*="fa-"] {
+    color: var(--magenta);
+}
+
+footer a {
+    font-size: 130%;
+    color: var(--white);
+    text-decoration: none;
+    display: block;
+}
+
+footer a:hover {
+    color: var(--aqua);
+}
+
+.section-plum {
+    margin-top: 5rem;
+}
