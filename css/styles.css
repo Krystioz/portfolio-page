@@ -291,6 +291,22 @@ nav a:hover {
 .prev {
     margin-right: 15px;
 }
+
+/* contact form section */
+
+#contactform {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+#contactform input {
+    border-radius: 25px;
+    padding: .5rem;
+    margin: .2em 0;
+}
+
 @media (min-width: 800px) {
     article {
         display: grid;
