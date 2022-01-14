@@ -307,6 +307,10 @@ nav a:hover {
     margin: .2em 0;
 }
 
+.check {
+    margin-top: 2rem;
+}
+
 @media (min-width: 800px) {
     article {
         display: grid;
