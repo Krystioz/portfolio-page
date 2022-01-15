@@ -134,7 +134,11 @@
                         <h4>Latest project</h4>
                         <h3>Weather app</h3>
                         <p class="blackbox">
-                            Simple yet beautifull weather app. It displays basic parameters that you need to know ! Also background image changes in relation to the input value (city, country, place etc.) . There are animations to make using it very plesant for the eye and user.
+                            Simple yet beautifull weather app. It displays basic
+                            parameters that you need to know ! Also background
+                            image changes in relation to the input value (city,
+                            country, place etc.) . There are animations to make
+                            using it very plesant for the eye and user.
                         </p>
                         <h4>Technologies used include:</h4>
                         <ul>
@@ -164,22 +168,45 @@
                 <h2>Contact me</h2>
                 <p>
                     If you have a question, offer or you just wanna talk be sure
-                    to email me by clicking the button below. I will reply back
+                    to email me by submitting the form below. I will reply back
                     when I see your message. :)
                 </p>
-                <p>
-                    <a href="mailto:gluszkokrystian@gmail.com" class="button"
-                        >Email me</a
+                <div class="form-wrap">
+                    <form
+                        id="contactform"
+                        action="https://formsubmit.io/send/0bdecc8c-16a3-4050-954f-6323651d60ca"
+                        method="POST"
                     >
-                    <form id="contactform" action="https://formsubmit.io/send/0bdecc8c-16a3-4050-954f-6323651d60ca" method="POST">
-                        <input name="name" type="text" id="name" placeholder="Your name"  required>
-                        <input name="email" type="email" id="email"placeholder="Email Address" required>
-                        <textarea name="comment" id="comment" rows="3">...</textarea>
-                    
-                        <input name="_formsubmit_id" type="text" style="display:none">
-                        <input value="Submit" type="submit">
+                        <label for="name">Your name</label>
+                        <input
+                            name="name"
+                            type="text"
+                            id="name"
+                            placeholder="Your name"
+                            required
+                        />
+                        <label for="email">Your email</label>
+                        <input
+                            name="email"
+                            type="email"
+                            id="email"
+                            placeholder="Email Address"
+                            required
+                        />     <label for="comment">Message</label>
+                        <textarea name="comment" id="comment" rows="3">
+Your message :</textarea
+                        >
+
+                        <input
+                            name="_formsubmit_id"
+                            type="text"
+                            style="display: none"
+                        />
+                        <button class="custom-btn btn-12">
+                            <span>Click!</span><span>Submit</span>
+                        </button>
                     </form>
-                </p>
+                </div>
             </section>
         </div>
         <div class="gradient"></div>
