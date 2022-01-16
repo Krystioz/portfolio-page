@@ -2,7 +2,7 @@ const textDisplay = document.getElementById("text");
 const phrases = [
     "I'm happy to have you on my site today ! ",
     "Please have a look around ",
-    "Be sure to check about section !",
+    "Be sure to check the about section !",
     "Try grabbing the photo there ",
 ];
 let currentPhrase = [];
