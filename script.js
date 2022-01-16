@@ -65,5 +65,5 @@ new Swiper(".swiper-container", {
     },
 });
 
-// Typewriter
+
 
