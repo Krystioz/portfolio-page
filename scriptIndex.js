@@ -17,13 +17,13 @@ function typeLoop() {
     textDisplay.innerHTML = currentPhrase.join("");
     // if there are things in the array - loop
     if (i < phrases.length) {
-        // loop over word, if there are letters in the word - push them to tag inner text
+        // loop over word, if x is smaller than number of letters in the word - push them to tag inner text
         if (!isDeleting && x <= phrases[i].length) {
             currentPhrase.push(phrases[i][x]);
             x++;
             textDisplay.innerHTML = currentPhrase.join("");
         }
-        // is deleting true and x smaller or equal words length start removing letters from tag inner text
+        // is deleting true and x smaller or equal current phrases length start removing letters from tag inner text
         if (isDeleting && x <= phrases[i].length) {
             currentPhrase.pop(phrases[i][x]);
             x--;
@@ -33,7 +33,7 @@ function typeLoop() {
             ifEnd = true;
             isDeleting = true;
         }
-        //if we looped over one phrase move to the next one
+        //if we looped over one phrase (added letters and then removed them) move to the next one
         if (isDeleting && x === 0) {
             currentPhrase = [];
             isDeleting = false;
