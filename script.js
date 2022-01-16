@@ -53,7 +53,6 @@ listen(document, "mouseup touchend").start(() => {
     }).start(ballXY);
 });
 
-
 new Swiper(".swiper-container", {
     speed: 200,
     effect: "cube",
@@ -65,3 +64,6 @@ new Swiper(".swiper-container", {
         prevEl: ".swiper-button-prev",
     },
 });
+
+// Typewriter
+

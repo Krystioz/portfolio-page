@@ -91,6 +91,16 @@ a:hover {
 #contact p:last-child {
     margin-top: 3rem;
 }
+/* Typewriter effect */
+
+/* zoom img effect */
+
+.zoom {
+    transition: transform 0.5s;
+}
+.zoom:hover {
+    transform: scale(1.3);
+}
 
 nav {
     font-family: var(--fraunces);
